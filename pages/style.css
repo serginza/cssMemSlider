@@ -1,9 +1,10 @@
 body {
-    background-color: blanchedalmond;
+    background-color: rgb(235, 234, 255);
 }
 
 .slider {
     margin: 30px auto;
+    min-width: 320px;
     max-width: 600px;
     height: auto;
     padding: 0 20px;
@@ -32,39 +33,27 @@ body {
     margin: 0px 0px 0 0px;
     width: 7px;
     height: 7px;
-    border: 8px solid blanchedalmond;
-    background-color: #d3efff;
+    border: 8px solid rgb(235, 234, 255);
+    background-color: #747381;
     cursor: pointer;
   }
 
   label:hover {
-    background-color: #38b6ff;
+    background-color: #23aeff;
   }
 
   .slider input[name="switch"] {
     display: none;
   }
 
-  #switch1:checked~.slider__shift label[for="switch1"] {
-    background-color: rgb(0, 81, 255);
-  }
-  
-  #switch2:checked~.slider__shift label[for="switch2"] {
-    background-color: rgb(0, 81, 255);;
-  }
-  
-  #switch3:checked~.slider__shift label[for="switch3"] {
-    background-color: rgb(0, 81, 255);
-  }
-
-  #switch4:checked~.slider__shift label[for="switch4"] {
-    background-color: rgb(0, 81, 255);
-  }
-
+  #switch1:checked~.slider__shift label[for="switch1"],
+  #switch2:checked~.slider__shift label[for="switch2"],
+  #switch3:checked~.slider__shift label[for="switch3"],
+  #switch4:checked~.slider__shift label[for="switch4"],
   #switch5:checked~.slider__shift label[for="switch5"] {
-    background-color: rgb(0, 81, 255);
+    background-color: #1a3bf5;
   }
-
+  
   .slider__image-container {
     box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.75);
     overflow: hidden;
@@ -94,6 +83,7 @@ body {
   margin-top: 20px;
   font-family: 'Comic Sans MS';
   font-style: normal;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -127,6 +117,8 @@ body {
     transform: translate(-400%);
   }
 
-  @media (min-width: 768px) and (max-width: 1279px) {
-    
+  @media (min-width: 30px) and (max-width: 400px) {
+    .slider__description {
+      font-size: 12px;
+      margin-top: 15px;
   }
