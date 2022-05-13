@@ -8,7 +8,6 @@ body {
     max-width: 600px;
     height: auto;
     padding: 0 20px;
-    /*outline: 1px solid rgb(252, 16, 16);*/
 }
 
 .slider > input {
@@ -16,7 +15,7 @@ body {
  }
 
 .slider__shift {
-    margin: 30px auto 0;
+    margin: 20px auto 0;
     width: 112px;
     height:  23px;
 }
@@ -30,7 +29,6 @@ body {
 
   .slider__shift label {
     display: inline-block;
-    margin: 0px 0px 0 0px;
     width: 7px;
     height: 7px;
     border: 8px solid rgb(235, 234, 255);
@@ -56,6 +54,7 @@ body {
   
   .slider__image-container {
     box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
     overflow: hidden;
   }
 
