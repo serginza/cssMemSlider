@@ -5,25 +5,19 @@ body {
 .slider {
     margin: 30px auto;
     max-width: 600px;
-    height: 600px;
-    outline: 1px solid rgb(252, 16, 16);
-}
-
-.slider__image {
-    width: 100%;
     height: auto;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+    padding: 0 20px;
+    /*outline: 1px solid rgb(252, 16, 16);*/
 }
 
 .slider > input {
- display: none;
-}
+    display: none;
+ }
 
 .slider__shift {
-    margin: 20px auto;
-    width: 111px;
+    margin: 30px auto 0;
+    width: 112px;
     height:  23px;
-    /*outline: 1px solid rgb(252, 16, 16);*/
 }
 
 .slider__shift_area {
@@ -31,7 +25,6 @@ body {
     width: 22px;
     height: 23px;
     margin-left: -3px;
-    /*outline: 1px solid rgb(252, 16, 16);*/
   }
 
   .slider__shift label {
@@ -39,7 +32,6 @@ body {
     margin: 0px 0px 0 0px;
     width: 7px;
     height: 7px;
-    border-radius: 50%;
     border: 8px solid blanchedalmond;
     background-color: #d3efff;
     cursor: pointer;
@@ -47,6 +39,10 @@ body {
 
   label:hover {
     background-color: #38b6ff;
+  }
+
+  .slider input[name="switch"] {
+    display: none;
   }
 
   #switch1:checked~.slider__shift label[for="switch1"] {
@@ -67,4 +63,70 @@ body {
 
   #switch5:checked~.slider__shift label[for="switch5"] {
     background-color: rgb(0, 81, 255);
+  }
+
+  .slider__image-container {
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+  }
+
+  .slider__slides {
+    width: 100%;
+    max-height: 100%;
+    transition: all 0.5s;
+    display: flex;
+}
+
+.slider__slides_image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slider__text-container {
+    overflow: hidden;
+}
+
+.slider__description {
+  max-width: 120%;
+  max-height: 100%;
+  transition: all 0.5s;
+  display: flex;
+  margin-top: 20px;
+  font-family: 'Comic Sans MS';
+  font-style: normal;
+  font-weight: 600;
+}
+
+.slider__description_text {
+  min-width: 100%;
+  max-height: 100%;
+}
+
+  #switch1:checked~.slider__image-container .slider__slides,
+  #switch1:checked~.slider__text-container .slider__description {
+    transform: translate(0);
+  }
+  
+  #switch2:checked~.slider__image-container .slider__slides,
+  #switch2:checked~.slider__text-container .slider__description {
+    transform: translate(-100%);
+  }
+  
+  #switch3:checked~.slider__image-container .slider__slides,
+  #switch3:checked~.slider__text-container .slider__description  {
+    transform: translate(-200%);
+  }
+
+  #switch4:checked~.slider__image-container .slider__slides,
+  #switch4:checked~.slider__text-container .slider__description {
+    transform: translate(-300%);
+  }
+  
+  #switch5:checked~.slider__image-container .slider__slides,
+  #switch5:checked~.slider__text-container .slider__description  {
+    transform: translate(-400%);
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    
   }
